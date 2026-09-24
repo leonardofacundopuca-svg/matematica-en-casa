@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aquamarine;
+    padding: 1rem;
+}
+header.marca{
+    display: flex ;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+header .marca img{
+    width: 3rem;
+    margin-right: 1rem;
+}
+header nav{
+    display: flex;
+    align-self: flex-end;
+}
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+header nav ul li{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-left: 1rem;
+}
+header nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2rem 1rem;
+    background-color: lightyellow;
+}
+#hero h2 {
+    margin-bottom: 1rem;
+}
