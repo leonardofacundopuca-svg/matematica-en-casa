@@ -9,27 +9,123 @@
 <body>
 <header>
     <div class="marca">
-        <img src="./assets/calculadora.jfif" alt="calculadora con símbolos matemáticos">
+        <img src="./assets/calculadora.jfif"
+     alt="Calculadora con símbolos matemáticos"
+     width="48"
+     height="48">
         <h1>Escuela Primaria N°41</h1>
     </div>
-    <nav>
-        <ul>
-            <li></li><a 
-        href="#Inicio">Inicio</a></li>
-        <li><a 
-        href="#Actividades">Actividades</a></li>
-        <li><a 
-        href="Familias">Familia</a></li>
+    <nav aria-label="Navegación principal">
+    <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#desafio">Desafío</a></li>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#familias">Familias</a></li>
     </ul>
-    </nav>
+</nav>
 </header>
 <main>
     <section id="hero">
-    <h2>Matemática en casa</h2>
-    <p>Actividades para seguir aprendiendo y practicar en familia</p>
+    <p class="etiqueta-hero">Matemática en casa</p>
+
+    <h2>La matemática está en todas partes</h2>
+
+    <p class="presentacion-hero">
+        Encontrá desafíos, juegos y recursos para aprender en casa
+        y compartir en familia.
+    </p>
+
+    <div class="acciones-hero">
+        <a class="boton boton-principal" href="#desafio">
+            Resolver el desafío
+        </a>
+
+        <a class="boton boton-secundario" href="#actividades">
+            Elegir una actividad
+        </a>
+    </div>
+</section>
+<section id="desafio">
+    <h2>Desafío de la semana</h2>
+
+    <p class="problema">
+        En la biblioteca de la escuela hay 6 estantes con 24 libros
+        en cada uno. ¿Cuántos libros hay en total?
+    </p>
+
+    <details>
+        <summary>Necesito una pista</summary>
+
+        <p>
+            Podés sumar 24 seis veces o pensar qué multiplicación
+            permite encontrar el resultado.
+        </p>
+    </details>
+
+    <details>
+        <summary>Ver una posible resolución</summary>
+
+        <p>
+            Podemos calcular 24 × 6. Una estrategia es pensar
+            20 × 6 = 120 y 4 × 6 = 24. Luego sumamos:
+            120 + 24 = 144 libros.
+        </p>
+    </details>
+</section>
+    <section id="actividades">
+        <h2>Actividades</h2>
+
+        <p>Elegí una propuesta para practicar matemática en casa.</p>
+         <article>
+            <h3>Primer ciclo</h3>
+            <p>Juegos y desafíos para practicar numeración, sumas y restas.</p>
+        </article>
+<article>
+            <h3>Segundo ciclo</h3>
+            <p>Problemas de multiplicación, división, fracciones y geometría.</p>
+        </article>
+        <article>
+            <h3>Desafío de la semana</h3>
+            <p>
+                En una biblioteca hay 6 estantes con 24 libros en cada uno.
+                ¿Cuántos libros hay en total?
+            </p>
+        </article>
     </section>
+<section id="familias">
+        <h2>Aprender en familia</h2>
+
+        <p>
+            La matemática también está presente en muchas situaciones cotidianas.
+        </p>
+
+        <ul>
+            <li>Calcular el vuelto durante una compra.</li>
+            <li>Leer precios y comparar ofertas.</li>
+            <li>Medir ingredientes al preparar una receta.</li>
+            <li>Jugar con cartas, dados o juegos de mesa.</li>
+        </ul>
+    </section>
+    <section id="recurso">
+    <h2>Aprendemos con un video</h2>
+
+    <p>
+        Mirá este video para repasar qué significa multiplicar
+        y cómo se relaciona con la suma.
+    </p>
+
+    <iframe
+        src="https://www.youtube.com/embed/Kc5LsSrjYHk"
+        title="Video educativo sobre la multiplicación"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+</section>
 </main>
-<footer></footer>
+<footer>
+    <p>Escuela Primaria N.º 41 “Martín Miguel de Güemes”</p>
+    <p>Marconi 2702 - Mar del Plata</p>
+</footer>
 
 </body>
 </html>

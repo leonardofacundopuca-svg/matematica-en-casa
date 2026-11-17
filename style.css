@@ -3,50 +3,324 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
+:root {
+    --color-primario: #f5bd72;
+    --color-secundario: #d66b3d;
+    --color-fondo: #fff8ed;
+    --color-texto: #3d3028;
+    --color-destacado: #8f3e24;
+    --color-claro: #ffefd2;
+    --color-blanco: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: aquamarine;
+    background-color: var(--color-primario);
     padding: 1rem;
 }
-header.marca{
-    display: flex ;
-    align-items: center;
-    margin-bottom: 1rem;
+header .marca img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    margin-right: 1rem;
 }
 header .marca img{
     width: 3rem;
     margin-right: 1rem;
 }
-header nav{
+header nav {
     display: flex;
-    align-self: flex-end;
+    width: 100%;
 }
 header nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
+    width: 100%;
 }
 header nav ul li{
     list-style: none;
     text-decoration: none;
     color: black;
-    margin-left: 1rem;
+    margin-left: 0;
 }
-header nav ul li a{
-    list-style: none;
+header nav ul li a {
+    display: block;
+    padding: 0.7rem 0.9rem;
+    color: var(--color-texto);
+    border: 0.1rem solid var(--color-secundario);
+    border-radius: 0.5rem;
     text-decoration: none;
-    color: black;
+    font-weight: bold;
 }
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    outline: 0.2rem solid var(--color-texto);
+    outline-offset: 0.2rem;
+}
+
+.boton-principal {
+    background-color: var(--color-destacado);
+    color: var(--color-blanco);
+}
+
+.boton-secundario {
+    background-color: var(--color-blanco);
+    color: var(--color-destacado);
+}
+
+.boton:hover,
+.boton:focus {
+    outline: 0.2rem solid var(--color-texto);
+    outline-offset: 0.2rem;
+}
+
+main {
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+}
+#inicio,
 #hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 60vh;
-    padding: 2rem 1rem;
-    background-color: lightyellow;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 1.25rem;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    text-align: center;
 }
+
+#inicio h2,
 #hero h2 {
+    max-width: 32rem;
+    color: var(--color-texto);
+    font-size: 2rem;
+}
+
+#inicio p,
+#hero p {
+    max-width: 32rem;
+    line-height: 1.6;
+}
+
+.acciones-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 24rem;
+    margin-top: 1rem;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 0.1rem solid var(--color-destacado);
+    border-radius: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+#desafio {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1.25rem;
+    background-color: var(--color-blanco);
+}
+
+#desafio h2 {
+    color: var(--color-destacado);
+    font-size: 1.6rem;
+}
+
+.problema {
+    padding: 1.2rem;
+    background-color: var(--color-claro);
+    border-left: 0.4rem solid var(--color-secundario);
+    border-radius: 0.6rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#desafio details {
+    padding: 1rem;
+    background-color: var(--color-fondo);
+    border: 0.1rem solid var(--color-secundario);
+    border-radius: 0.6rem;
+}
+
+#desafio summary {
+    color: var(--color-texto);
+    font-weight: bold;
+    cursor: pointer;
+}
+#desafio summary:focus {
+    outline: 0.2rem solid var(--color-texto);
+    outline-offset: 0.3rem;
+}
+
+#desafio details p {
+    margin-top: 1rem;
+}
+/* Sección de actividades */
+
+#actividades {
+    padding: 2rem 1.25rem;
+    background-color: var(--color-fondo);
+}
+
+#actividades > h2 {
+    margin-bottom: 0.5rem;
+    color: var(--color-destacado);
+    font-size: 1.6rem;
+}
+
+#actividades > p {
+    margin-bottom: 1.5rem;
+    color: var(--color-texto);
+}
+
+/* Tarjetas de cada ciclo */
+
+#actividades article {
     margin-bottom: 1rem;
+    padding: 1.25rem;
+    background-color: var(--color-blanco);
+    border-left: 0.4rem solid var(--color-secundario);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(61, 48, 40, 0.15);
+}
+
+/* Primer ciclo, Segundo ciclo, etc. */
+
+#actividades article h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-destacado);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+/* Texto de las tarjetas */
+
+#actividades article p {
+    color: var(--color-texto);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+#familias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1.25rem;
+    background-color: var(--color-claro);
+}
+
+#familias h2 {
+    color: var(--color-destacado);
+    font-size: 1.6rem;
+}
+
+#familias p,
+#familias li {
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+#familias ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-left: 1.5rem;
+}
+#recurso {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1.25rem;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+}
+
+#recurso h2 {
+    color: var(--color-destacado);
+    font-size: 1.6rem;
+}
+
+#recurso p {
+    line-height: 1.6;
+}
+
+#recurso iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 0.8rem;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.5rem 1.25rem;
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    text-align: center;
+}
+@media (min-width: 48rem) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 1.5rem 3rem;
+    }
+
+    header .marca {
+        margin-bottom: 0;
+    }
+
+    header nav {
+        width: auto;
+    }
+
+    header nav ul {
+        width: auto;
+    }
+    
+    main {
+        max-width: 60rem;
+    }
+
+    .acciones-hero {
+        flex-direction: row;
+        max-width: 36rem;
+    }
+
+    #actividades {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #actividades > h2,
+    #actividades > p {
+        width: 100%;
+    }
+
+    #actividades article {
+        flex: 1 1 16rem;
+        margin-bottom: 0;
+    }
 }
